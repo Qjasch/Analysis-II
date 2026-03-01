@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{notes}
+
+\setcounter{section}{0}
+\renewcommand{\thesection}{2.\arabic{section}}
+
+\begin{document}
+\stdtitle{ANALYSIS II}{Exercise Sheet 2}{Jakob Schildhauer}
+
+\section{Examples and Non-examples of Metric spaces}
+\begin{enumerate}
+    \item $d(f, g) = 0 \iff f = g$, $d(f, g) = d(g, f)$, $d(f, g) + d(g, h) = \sup_{x \in X} \abs{f(x) - g(x)} + \sup_{x \in X} \abs{g(x) - h(x)} = \sup_{x \in X} \abs{f(x) - h(x)} = d(f, h)$.
+
+    \item $d(x, y) = 0 \iff x = y$, $d(x, y) = \abs{\frac{1}{x} - \frac{1}{y}} = \abs{\frac{1}{y} - \frac{1}{x}} = d(y, x)$, $d(x, y) + d(y, z) = \abs{\frac{1}{x} - \frac{1}{y}} + \abs{\frac{1}{y} - \frac{1}{z}} \geq \abs{\frac{1}{x} - \frac{1}{z}} = d(x, z)$.
+
+    \item Counterexample: $x = (0, 0), y = (1, 0), z = (2, 0)$. Then $d(x, y) + d(y, z) = 2 < d(x, z) = 4$.
+    
+    \item $d(x, y) = 0 \iff x = y$, $d(x, y) = d(y, x)$, $\sqrt{\abs{x_1 - y_1}} + \sqrt{\abs{y_1 - z_1}} \geq \sqrt{\abs{x_1 - z_1}}$, as the root is concave. Triangle inequality in the second component holds trivially so the triangle inequality holds for $d$.
+
+    \item Counterexample: $X = E_{12}, Y = 0 \in \R^{2\times 2}$. Then $d(X, Y) = 0$, $X \neq Y$.
+    
+    \item Counterexample: $X = 0 \in \R^{2\times 2}$, $Y = \begin{pmatrix} 0 &  -1 \\ 1 & 0 \end{pmatrix}$. Then $d(X, Y) = 0$, $X \neq Y$.
+    
+    \item $d([x], [y]) = 0 \iff [x] = [y] \iff x - y \in \Z$, so $d([x], [y]) = d(x, y) \bmod 1$. Therefore, $d([x], [y]) = d([y], [x])$, and $d([x], [z]) \leq d([x], [y]) + d([y], [z])$ follows from the triangle inequality for $d$.
+\end{enumerate}
+
+\section{Multiple choice}
+\begin{enumerate}
+    \item True. 
+    \item False.
+    \item True. 
+    \item False
+\end{enumerate}
+
+\section{Multiple choice}
+\begin{enumerate}
+    \item True.  
+    \item False. 
+    \item True. 
+    \item False. 
+\end{enumerate}
+
+\section{Boundary, interior, closure}
+\begin{enumerate}
+    \item $Y° = (0, 1), \overline{Y} = [0, 1], \partial Y = \Set{0, 1}$
+    \item $Y° = \emptyset, \overline{Y} = \R, \partial Y = \R$
+    \item $Y° = \emptyset, \overline{Y} = \emptyset, \partial Y = \emptyset$
+    \item $Y° = (0, 1), \overline{Y} = [0, 1], \partial Y = \Set{0, 1}$
+    \item $Y° = (-1, 0) \cup (0, 1), \overline{Y} = [-1, 1], \partial Y = \Set{-1, 0, 1}$
+    \item $Y° = (0, \infty), \overline{Y} = [0, \infty), \partial Y = \Set{0}$
+    \item $Y° = \emptyset, \overline{Y} = \Set{0}, \partial Y = \Set{0}$
+    \item $Y° = \emptyset, \overline{Y} = Y \cup \Set{0}, \partial Y = Y \cup \Set{0}$
+\end{enumerate}
+
+\section{Product of metric spaces}
+\begin{enumerate}
+    \item $d_i[(x, y), (x', y')] = 0 \iff (x, y) = (x', y') \fa i$, since the distances are non-negative. \\
+    Symmetry follows from the symmetry of $d_X$ and $d_Y$. \\
+    $\max \Set{d_X(x, x'), d_Y(y, y')} + \max \Set{d_X(x', x''), d_Y(y', y'')} \geq \max \Set{d_X(x, x''), d_Y(y, y'')}$. \\
+    $d_X(x, x') + d_Y(y, y') + d_X(x', x'') + d_Y(y', y'') \geq d_X(x, x'') + d_Y(y, y'')$, since $d$ is a distance function. \\
+    Since $d_3$ is the euclidean distance in $d_X, d_Y$, the triangle inequality holds for $d_3$.
+
+    \item $C = 2$ suffices.  
+    
+    \item Suppose that the sequence converges in only one metric. 
+    Without loss of generality, let $\e > 0: \fa N \in \N \ex n \geq N $ with $d_X(x_n, x) \geq \e$. 
+    Then, $\fa N \in \N \ex n \geq N: d_3((x_n, y_n), (x, y)) \geq \e$.
+\end{enumerate}
+
+\section{Continuity of the distance}
+$\abs{d(x_1, y_1) - d(x_2, y_2)} \leq d(x_1, y_1) + d(x_2, y_2) = d_2(x, y)$, so $d$ is 1-Lipschitz continuous in $d_2$. \\
+$\abs{d(x_1, y_1) - d(x_2, y_2)} \leq d(x_1, y_1) + d(x_2, y_2) \leq 2 d_1(x, y)$, so $d$ is 2-Lipschitz continuous in $d_1$. \\
+$\abs{d(x_1, y_1) - d(x_2, y_2)} \leq d(x_1, y_1) + d(x_2, y_2) \leq 2 d_3(x, y)$, so $d$ is at least 2-Lipschitz continuous in $d_3$. \\
+
+\newpage 
+
+\section{Continuity}
+\subsection*{Topological}
+$A \subseteq X$ open, $f$ continuous $\implies f(A)$ open. 
+Then, $g$ continuous $\implies g(f(A))$ open, so $g \circ f$ continuous.
+
+\subsection*{Epsilon-Delta}
+Choose $\e_Z > 0$. By continuity of $g$, choose $\e_Y := \delta_X > 0$ such that the usual condition holds and repeat to get $\delta_Y > 0$, which will satisfy the condition for $g \circ f$.
+
+\subsection*{Sequential}
+Let $x_n \to x$ be a sequence in $X$. By continuity of $f$, $f(x_n) \to f(x)$, and by continuity of $g$, $g(f(x_n)) \to g(f(x))$.
+\end{document}
