@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage{notes}
+
+\setcounter{section}{0}
+\renewcommand{\thesection}{3.\arabic{section}}
+
+\begin{document}
+\stdtitle{ANALYSIS II}{Exercise Sheet 3}{Jakob Schildhauer}
+
+\section{Lipschitz or not}
+\begin{enumerate}[label=(\alph*)]
+    \item $x \mapsto \frac{x + 1}{2}$
+    \item $R^2 \ni (x, y) \mapsto (x + 1, y) \in \R^2$
+\end{enumerate}
+
+\section{Problems at the origin}
+Let $y_k := f\left(\frac{1}{k}, \frac{1}{k}\right)$ and $z_k := f\left(\frac{1}{k}, -\frac{1}{k}\right)$ for $k \in \N$. Then $y_k \to 1$ and $z_k \to -1$. By continuity, $f(0, 0) = 1$ and $f(0, 0) = -1$. Contradiction. \\
+$g$ is trivially continuous except at the origin. Let $x_k$ be any sequence with $x_k \to 0$. Then $g(x_k) \to 0$, since $|g(x_k)| \leq \abs{x_k}$. By continuity, with $g(0) = 0$, $g$ is continuous, and since the limit is unique, $g$ is uniquely defined. 
+
+
+\section{Open, closed, complete and compact}
+\begin{enumerate}
+    \item Not open, not closed, not complete, not compact since it is partially open and partially open and you can contstruct $E_1 \ni (0, 0, k^{-1}) \to 0 \notin E_1$. 
+    \item Not open, closed, complete, not compact since the preimage is closed and the set is unbounded.
+    \item Open, not closed, not complete, not compact since this is the union of open sets and it is unbounded. 
+    \item Open, not closed, not complete, not compact since the preimage is open. 
+    \item Open, not closed, not complete, not compact since the determinant is a continuous function that maps the matrices to the open set $\R \setminus \{0\}$. 
+    \item Closed?
+    \item Not open, closed, complete, compact since the set is finite. 
+    \item Not open, closed, complete, compact since this set is just a closed box, which was shown to be compact. 
+    \item Not open, not closed, not complete since it inherits the features of both sets as the dimensions are independent. 
+    \item Closed, not open, complete, compact since the intersection of compact sets is compact. 
+\end{enumerate}
+
+\newpage
+
+\section{Multiple choice}
+Correct: \titlefont{(c)}, \titlefont{(d)}, \titlefont{(e)}. 
+
+\section{Multiple choice}
+Correct: \titlefont{(a)} (if the desk is in Zürich), \titlefont{(c)}, \titlefont{(e)}. 
+
+\section{Multiple choice}
+Correct: \titlefont{(a)}, \titlefont{(c)}, \titlefont{(d)}. 
+
+\section{Cauchy-Schwarz}
+\dots
+
+\section{Inner product and norm}
+$\norm{v + w}^2 = \langle v + w, v + w\rangle 
+= \langle v, v\rangle^2 + 2\langle v, w\rangle + \langle w, w\rangle^2
+\leq \norm{v}^2 + 2\norm{v}\norm{w} + \norm{w}^2 = (\norm{v} + \norm{w})^2$. \\
+Since the norm is non-negative, taking the square root yields the triangle inequality.
+
+\section{All norms are equivalent in $\R^n$}
+\begin{enumerate}
+    \item $f(x) \leq \sum_{i=1}^n |x_i| f(e_i) \leq C_1 \norm{x}$
+    \item $\abs{f(x) - f(y)} = \norm{f(x) - f(y)} \leq C \norm{x - y}$, so $f$ is Lipschitz.
+    \item Since $x \neq 0$ and the sphere is compact, it attains a minimum $c_2 > 0$.  
+    \item $x \neq 0 \implies f(x) = \norm{x} f\left(\frac{x}{\norm{x}}\right) \geq c_2 \norm{x}, x = 0 \implies f(0) = 0$. 
+    \item Let $C := \max \Set{C_1, c_2^{-1}}$. 
+\end{enumerate}
+
+\section{Hilbert Schmidt norm of the composition}
+Viewing the matrix product as a sum inner products of rows and columns, applying Cauchy-Schwarz and the definition of the Hilbert Schmidt norm, we get
+\begin{align*}
+    \norm{\Psi \Phi}^2 &= \sum_{i} \sum_{j} \left(\sum_{k=1}^n \Psi _{ik} \Phi_{kj}\right)^2 \\
+    &\leq \sum_{i} \sum_{j} \left(\norm{\Psi _{i\cdot}}^2 \norm{\Phi_{\cdot j}}^2\right) \\
+    &= \sum_{i} \norm{\Psi _{i\cdot}}^2 \sum_{j} \norm{\Phi_{\cdot j}}^2 \\
+    &= \norm{\Psi }^2 \norm{\Phi}^2
+\end{align*}
+
+\section{Uniform continuity and moduli of continuity}
+\begin{enumerate}
+    \item Suppose $f$ has a modulus of continuity. Then, $\abs{f(x) - f(y)} \leq \omega(\abs{x - y}) \leq \omega(\delta)$ for all $x, y$ with $\abs{x - y} < \delta$. Hence, $f$ is uniformly continuous. \\
+    Conversly, suppose $f$ is uniformly continuous. Then, for $\varepsilon = 1/n$, there exists $\delta_n > 0$ such that $\abs{f(x) - f(y)} < 1/n$ for all $x, y$ with $\abs{x - y} < \delta_n$. Define $\omega(\varepsilon) := 1/n$ for $\varepsilon \in [\delta_{n+1}, \delta_n)$. Then, $\omega$ is a modulus of continuity for $f$.
+    \item \dots 
+    \item \dots
+\end{enumerate}
+\end{document}
