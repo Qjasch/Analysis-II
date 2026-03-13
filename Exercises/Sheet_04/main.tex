@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{notes}
+
+\setcounter{section}{0}
+\renewcommand{\thesection}{4.\arabic{section}}
+
+\begin{document}
+\stdtitle{ANALYSIS II}{Exercise Sheet 4}{Jakob Schildhauer}
+
+\section{Derivative computation}
+$\p_x u = \sin y \; x^{\sin y - 1}$, $\p_y u = \ln x \; \cos y \; x^{\sin y}$
+
+\section{Connected graphs}
+Let $(x_1, y_1), (x_2, y_2) \in \Gamma_f$. 
+By connectedness of $U$, there exists $p: [0, 1] \to U, p(0) = x_1, p(1) = x_2, p \in C^0([0, 1])$. 
+It follows immediately that $q: t \in [0, 1] \mapsto (p(t), f(p(t))) \in \R^n \times \R^m$ is a member of $C^0([0, 1])$ and $q(0) = x_1, y_1), q(1) = (x_2, y_2)$, so there exists a continuous path between the arbritrary chosen points, proving the graph is connected. 
+
+\section{$p$-norms}
+\begin{enumerate}
+    \item \dots 
+    
+    \item $\abs{x}_\infty = \max_{i=1,\ldots,n} \abs{x_i}$
+    
+    \item \dots 
+    
+    \item \dots 
+    
+    \item \dots
+    
+    \item In this case, $f$ is concave and the triangle inequality fails. 
+\end{enumerate}
+
+\section{$p$-means}
+\begin{enumerate}
+    \item $\mu_{-\infty} = \min_{i=1,\ldots,n} x_i$, $\mu_\infty = \max_{i=1,\ldots,n} x_i$, $\mu_0(x) = 1$
+    
+    \item \dots 
+    
+    \item \dots
+\end{enumerate}
+
+\section{Mean value for vector-valued functions}
+Counterexample: $t \mapsto (\sin \pi t, \sin 2\pi t)$. 
+
+\section{A directional derivative vanish}
+\begin{enumerate}
+    \item \dots 
+    
+    \item \dots 
+    
+    \item \dots
+\end{enumerate}
+\end{document}
