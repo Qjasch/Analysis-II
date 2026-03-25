@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{notes}
+
+\setcounter{section}{0}
+\renewcommand{\thesection}{5.\arabic{section}}
+
+\begin{document}
+\stdtitle{ANALYSIS II}{Exercise Sheet 5}{Jakob Schildhauer}
+
+\section{Derivatives}
+\begin{enumerate}[label=(\alph*)]
+    \item $x = \pm \frac{\sqrt{2}}{2}, y = \pm 1$
+    
+    \item \dots 
+\end{enumerate}
+
+\section{Lagrange Multipliers}
+\begin{enumerate}
+    \item $\overline{U}$ is compact (closed and bounded) in $R^3$, therefore $f$ attains extremas. 
+    
+    \item $\nabla f = 0 \implies x = 2, y = 0$, which is not part of the interior of $U$. 
+    Therefore, neither $\sup$ nor $\inf$ are attained. 
+
+    \item $f$ is continuous and $\p U$ is compact, therefore a minimum and maximum exist.
+    
+    \item Let $g(x, y, z) := x^2 + y^2 + z^2 - 1 \fa x, y, z$. 
+    Then $\nabla f = \lambda \nabla g$ gives $x = 1, y = z = 0$ or $x = -1, y = z = 0$, where substituting shows that the first is a maximum and the second a minimum.
+    
+    \item On $\overline{U}$, the maximum and minimum are as described in \titlefont{4.}. 
+\end{enumerate}
+
+\section{Multiple Choice}
+Correct: \titlefont{(a)}, \titlefont{(c)}.
+
+\section{Computation of Derivatives}
+\begin{enumerate}
+    \item \begin{itemize}
+        \item $\p_v \frac{x_1}{x_2} = v \cdot \left(\frac{1}{x_2}, \frac{-x_1}{x_2^2} \right)^T$
+        \item $\p_v e^{-x_1 / x_2} = v \cdot \left( \right)^T$
+        \item $\p_v f = v \cdot \left( \right)^T$
+        \item $\p_v f = v \cdot \left( \right)^T$
+    \end{itemize}
+    \item \begin{itemize}
+        \item $\p_v f = $
+        \item $\p_v f = $
+        \item $\p_v f = $
+        \item $\p_v f = $
+    \end{itemize}
+    \item \begin{itemize}
+        \item $\p_v f = $
+        \item $\p_v f = $
+        \item $\p_v f = $
+        \item $\p_v f = $
+    \end{itemize}
+    \item \begin{itemize}
+        \item $\p_v f = $
+        \item $\p_v f = $
+        \item $\p_v f = $
+        \item $\p_v f = $
+    \end{itemize}
+\end{enumerate}
+
+\section{Multiple Choice}
+Correct: \titlefont{(a)}, \titlefont{(b)}. 
+
+\section{Polynomials}
+Assume by contradiction $\ex \alpha < \sigma$ with $a_{\alpha} \neq b_{\alpha}$ and define $c_k := a_k - b_k$ for all $k \in \N_0$. Then $c_{\alpha} \neq 0$. We have 
+
+\section{Chain Rule for a Curve}
+\begin{enumerate}
+    \item After some pointless calculations \dots \\
+    $r''(t) = R\begin{pmatrix} -\Bigl(b''(t)\sin b(t) + \bigl(b'(t)^2+(\omega+a'(t))^2\bigr)\cos b(t)\Bigr)\cos(\omega t+a(t)) - a''(t)\cos b(t)\sin(\omega t+a(t)) \\[6pt] -\Bigl(b''(t)\sin b(t) + \bigl(b'(t)^2+(\omega+a'(t))^2\bigr)\cos b(t)\Bigr)\sin(\omega t+a(t)) + a''(t)\cos b(t)\cos(\omega t+a(t)) \\[6pt] b''(t)\cos b(t) - b'(t)^2\sin b(t) \end{pmatrix}$
+    
+    \item \dots
+\end{enumerate}
+\end{document}
