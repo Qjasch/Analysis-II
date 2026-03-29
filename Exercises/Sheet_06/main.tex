@@ -9,37 +9,63 @@
 
 \section{Convex functions}
 \begin{enumerate}
-    \item \dots 
-    \item \dots 
+    \item Assume $z$ is a critical point. Let $0 \neq v \in R^n$ and examine $g(t) := f(z + tv) \fa t \in \R$, which is convex. \\ 
+    Then $\frac{d^2}{dt^2} g(0) = 0$, implying that $0$ is a global minimum of $g$. Since $v$ was arbritrary, $z$ is a global minimizer of $f$. 
+    
+    On the contrary, it was already proven that every local minimum is a critical point. 
+    
+    \item $f(x, y) = \exp(x + y)$
 \end{enumerate}
 
-\section{The signature of a $2 \times 2$ matrix}
-\begin{enumerate}
-    \item \dots 
-    \item \dots 
-    \item \dots
-\end{enumerate}
-
-\section{Isoperimic triangles}
-
+\addtocounter{section}{2}
 
 \section{Barycenter}
+$f(x) = \sum_{i=1}^{n} \sum_{j=1}^{k} (x_i - (y_j)_i)^2$. Then $\nabla f(x) = 2 \sum_{j=1}^{k} (x - y_j)$, so the unique critical point is $x = \frac{1}{k} \sum_{j=1}^{k} y_j$, which is a global minimum because the domain is open and $f$ diverges to $\infty$ as $\|x\| \to \infty$.
 
+\addtocounter{section}{1}
 
-\section{Linear regression I}
-\begin{enumerate}
-    \item \dots 
-    \item \dots 
-    \item \dots
-\end{enumerate}
 
 \section{Convex functions}
 \begin{enumerate}
-    \item \dots 
-    \item \dots 
-    \item \dots 
-    \item \dots 
-    \item \dots 
-    \item \dots
+    \item Convex
+    \item Convex.
+    \item Not convex. 
+    \item Not convex. 
+    \item Convex. 
+    \item Convex. 
+    \item Not convex.
+    \item Convex.
+    \item Convex.
+    \item Convex.  
+    \item Not convex.
 \end{enumerate}
+
+\section{Multiple choice}
+Correct: \titlefont{(c)}, \titlefont{(e)}.
+
+
+\section{Multiple choice}
+Correct: \titlefont{(b)}. 
+
+\section{Minimization}
+\begin{enumerate}[label=(\alph*)]
+    \item The extremum of $1 + x^2 - x$ for $x \in [0, 1]$ is $x = 1$, so the extrumum of $f$ on $\mathbb{S}^1$ is $(x, y) = (1, 0)$. 
+    
+    \item $\nabla f = 0 \iff 4x - 1 = 0 \wedge 4y = 0 \iff (x, y) = \left(\frac{1}{4}, 0\right)$, which together with the point described in \titlefont{(a)} are the extrema of $f$ on the closed unit disk. 
+\end{enumerate}
+
+\section{Lagrange multipliers}
+$\lambda_0 \nabla f + \lambda_1 \nabla g_1 + \lambda_2 \nabla g_2 = \lambda_0 \begin{pmatrix}
+    3 & -1 & 2
+\end{pmatrix}^T + \lambda_1 \begin{pmatrix}
+    2x & 2y & 2z 
+\end{pmatrix}^T + \lambda_2 \begin{pmatrix}
+    1 & 1 & 0
+\end{pmatrix}^T = 0, \lambda_0^2 + \lambda_1^2 + \lambda_2^2 \neq 0$ \\
+
+Since $\lambda_0 = 0$ would lead to a contradiction, fix it at $\lambda_0 = 1$ and obtain $\lambda_1 = \frac{\lambda_0}{z} = \frac{1}{z}$. From there, subtracting the equation in $x$- and $y$-components yields $x = 2z + y \xRightarrow{x + y = 0} x = \frac{1}{\lambda}, y = -\frac{1}{\lambda}$. \\
+By the sphere constraint, the critical points are $(x, y, z) = \left(\pm \frac{1}{\sqrt{3}}, \mp \frac{1}{\sqrt{3}}, \pm \frac{1}{\sqrt{3}}\right)$, of which the first one is a local maximum and the second one is a local minimum by polarizing. \\
+Since the domain is compact, these are also the global extrema.
+
+
 \end{document}
