@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{notes}
+
+\setcounter{section}{0}
+\renewcommand{\thesection}{7.\arabic{section}}
+
+\begin{document}
+\stdtitle{ANALYSIS II}{Exercise Sheet 7}{Jakob Schildhauer}
+
+\section{Diffeomorphism}
+\begin{enumerate}
+    \item $(x, y) \mapsto \left(\frac{\arctan x}{\pi} + \frac12. \frac{\arctan y}{\pi} + \frac12\right)$
+    \item $f(x)$ is clearly bijective as $f^{-1}(y) =\sqrt[5]{y}$ is defined on the whole of $\R$. However, the derivative of the inverse is not defined at $x = 0$, so $f$ is not a diffeomorphism.
+
+\end{enumerate}
+
+\section{Inverse function I}
+$\det J_F(x, y) = 3x^2 y^2 \neq 0 \fa x, y \neq 0$, \\
+$(J_F(2, 1)^{-1}) = \frac{1}{12}\begin{pmatrix}
+    4 & -4 \\ -1 & 4
+\end{pmatrix}$.
+
+\section{Implicit function I}
+\begin{enumerate}
+    \item \dots 
+    \item \dots 
+    \item \dots
+\end{enumerate}
+
+\section{Multiple choice}
+Correct: \titlefont{(a)}, \titlefont{(d)}.
+
+\section{Implicit function II}
+\begin{enumerate}
+    \item \dots 
+    \item \dots 
+    \item \dots
+\end{enumerate}
+
+\section{Spherical coordinates}
+\begin{enumerate}
+    \item The images are orthogonal (like a local cartesian coordinate system).
+    \item $\Image \Phi = \R^3 \setminus \SET{(x, y, z)}{x \leq 0, y = 0}$
+    \item Extensive computation of the determinant where a lot cancels thanks to $\cos^2 + \sin^2$.
+    \item Every cartesian point in the image of $\Phi$ has a unique spherical and vice versa, so bijectivity follows. Since $\Phi$ is a local diffeomorphism ($r^2 \sin \theta > 0$), $\Phi$ is a global diffeomorphism. 
+\end{enumerate}
+
+\section{Parametrized surfaces}
+\begin{enumerate}
+    \item Möbius: $n(u, v) = $
+    \item 
+    \item $(\theta, \varphi) \mapsto (a \sin \theta \cos \varphi, b \sin \theta \sin \varphi, c \cos \theta)$, where $\theta \in (0, \pi), \varphi \in (-\pi, \pi)$ (inheriting the problems of spherical coordinates). 
+\end{enumerate}
+
+\section{Graphs as parametrized surfaces}
+\begin{enumerate}
+    \item $\phi(x, y) = (x, y, f(x, y))$.
+    \item 
+    \item 
+    \item 
+\end{enumerate}
+
+\section{The IFT is only a sufficient condition}
+\begin{enumerate}
+    \item $\frac{\p f(0, 0)}{\p x} = \frac{\p f(0, 0)}{\p y} = 0$
+    \item For a fixed $y$, $f$ is strictly decreasing, so there exists a unique solution everywhere. 
+    \item $\alpha$  
+\end{enumerate}
+\end{document}
