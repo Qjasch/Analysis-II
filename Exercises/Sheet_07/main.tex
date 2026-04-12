@@ -20,22 +20,14 @@ $(J_F(2, 1)^{-1}) = \frac{1}{12}\begin{pmatrix}
     4 & -4 \\ -1 & 4
 \end{pmatrix}$.
 
-\section{Implicit function I}
-\begin{enumerate}
-    \item \dots 
-    \item \dots 
-    \item \dots
-\end{enumerate}
+% 7.3 left out 
+\addtocounter{section}{1}
 
 \section{Multiple choice}
 Correct: \titlefont{(a)}, \titlefont{(d)}.
 
 \section{Implicit function II}
-\begin{enumerate}
-    \item \dots 
-    \item \dots 
-    \item \dots
-\end{enumerate}
+Define $F$ to be a function such that $F(x, y, z, u, v) = \left(xy^5 + yu^5 + zv^5 - 1 \quad x^5y + y^5u + z^5 - 1\right)^T$. Then $F(0, 1, 1, 1, 0) = 0$ and $\det \frac{\p F}{\p (u, v)}(0, 1, 1, 1, 0) = 5 \neq 0$, so the IFT applies.
 
 \section{Spherical coordinates}
 \begin{enumerate}
@@ -45,25 +37,27 @@ Correct: \titlefont{(a)}, \titlefont{(d)}.
     \item Every cartesian point in the image of $\Phi$ has a unique spherical and vice versa, so bijectivity follows. Since $\Phi$ is a local diffeomorphism ($r^2 \sin \theta > 0$), $\Phi$ is a global diffeomorphism. 
 \end{enumerate}
 
+\newpage
+
 \section{Parametrized surfaces}
 \begin{enumerate}
-    \item Möbius: $n(u, v) = $
-    \item 
+    \item Möbius: $n(u, v) = R_z(u) R_x\left(\frac{u}{2}\right)  e_3$, where $R_x, R_y$ are rotation matrices. 
+    \item The normal points in the opposite direction compared to $u = 0$ (key characteristic of the Möbius stip). 
     \item $(\theta, \varphi) \mapsto (a \sin \theta \cos \varphi, b \sin \theta \sin \varphi, c \cos \theta)$, where $\theta \in (0, \pi), \varphi \in (-\pi, \pi)$ (inheriting the problems of spherical coordinates). 
 \end{enumerate}
 
 \section{Graphs as parametrized surfaces}
 \begin{enumerate}
     \item $\phi(x, y) = (x, y, f(x, y))$.
-    \item 
-    \item 
-    \item 
+    \item Choose any two linear independent vectors ortogonal to the normal vector calculated in \titlefont{(d)}. 
+    \item $T_pM = \SET{q \in \R^3}{q - p \perp N_pM}$ 
+    \item $N_pM = \left(- \frac{\p f(p_1, p_2)}{\p x}\quad - \frac{\p f(p_1, p_2)}{\p y }\quad 1 \right)^T$ 
 \end{enumerate}
 
 \section{The IFT is only a sufficient condition}
 \begin{enumerate}
     \item $\frac{\p f(0, 0)}{\p x} = \frac{\p f(0, 0)}{\p y} = 0$
     \item For a fixed $y$, $f$ is strictly decreasing, so there exists a unique solution everywhere. 
-    \item $\alpha$  
+    \item Differentiating as described in the hint gives $Y(1/2) = \frac{1}{8}, Y'(1/2) = 2, Y''(1/2) = \frac{29}{4}$ 
 \end{enumerate}
 \end{document}
