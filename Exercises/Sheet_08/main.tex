@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{notes}
+
+\setcounter{section}{0}
+\renewcommand{\thesection}{8.\arabic{section}}
+
+\begin{document}
+\stdtitle{ANALYSIS II}{Exercise Sheet 8}{Jakob Schildhauer}
+
+\section{Jordan-null set}
+\begin{enumerate}
+    \item $\mu_{out}(X \times X) = \inf \SET{\mu(F \times F)}{X \subseteq F} = \e^2$, since the cover is a finite collection of squares. 
+    \item $\mu_{out}(X \times [0, 1]) = \inf \SET{\mu(F \times [0, 1])}{X \subseteq F} = \e$, since the cover is a finite collection of rectangles. 
+\end{enumerate}
+
+\section{True or false}
+Correct: \titlefont{2.}, \titlefont{3.}, \titlefont{4.}
+
+\section{Fat Boundary}
+$\Q \cap (0, 1)$. 
+
+\section{Multiple choice}
+Correct: \titlefont{2.}
+
+\section{Change of variables and Jacobians}
+\begin{enumerate}
+    \item $\int_A x_1^2 \sin(x_2) \, dx_1 dx_2 = \int_{A'} r^3 \cos^2 \theta \sin(r \sin \theta)\,dr d\theta, A' = (1, 2) \times \left(-\frac{\pi}{2}, \frac{\pi}{4}\right)$ 
+    
+    \item $\int_B y^2 \exp(-xy)\, dx dy = \int_{1}^{2} \int_{\left(\frac{u}{2}\right)^{\frac{2}{3}}}^{2v^{\frac{2}{3}}}\frac{u^2 \exp(-u)}{2v^2} \, du dv$  
+    
+    \item $\int_C xyz \, dx dy dz = \int_{C'} \frac{1}{6}\left(\frac{w}{3} - \frac{u}{2} + \frac{v}{6}\right) \left(\frac{u - v}{2}\right) u \, du dv dw, 
+    C' = (0, 1) \times (1, 2) \times (-2, 0)$ 
+\end{enumerate}
+
+\section{The Cantor set}
+\begin{enumerate}
+    \item Let $X_n$ be the set of numbers in $[0, 1]$ without an $8$ in the first $n$ digits of their decimal expansion. \\
+    Then $\mu(X_n) = \left(\frac{9}{10}\right)^n \to 0, X \subseteq X_n \fa n \implies \mu(X) = 0$. 
+    \item Apply Cantor's diagonal argument but never use the digit $8$ to construct a number that is not in $X$. 
+    \item As in \titlefont{8.1}.
+    \item Let $x_n \subseteq X$ be a sequence converging to $x$. By convergence, the first $n$ digits of $x_n$ and $x$ are the same for sufficiently large $n$. Since $x_n \in X$, the first $n$ digits of $x_n$ are not $8$, so the first $n$ digits of $x$ are not $8$. Thus, $x \in X$.
+\end{enumerate}
+\end{document}
